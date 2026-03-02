@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Open When 💌</title>
+<style>
+body {
+  font-family: Arial;
+  background: #ffe6f0;
+  text-align: center;
+  padding: 30px;
+}
+
+button {
+  background: #ff99cc;
+  border: none;
+  padding: 15px 25px;
+  margin: 10px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.letter {
+  display: none;
+  background: white;
+  padding: 25px;
+  margin-top: 20px;
+  border-radius: 15px;
+  text-align: left;
+}
+
+img {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Open When 💌</h1>
+
+<button onclick="openLetter('prebday','bubbles')">Open When It's The Day Before Your Birthday</button>
+<button onclick="openLetter('heartvoice','Dil kyu yeh mera')">Open To Know My Heart's First Voice</button>
+<button onclick="openLetter('fight','I am sorry Sarah')">Open When We Fight</button>
+<button onclick="openLetter('doubt','Sarah hai na')">Open When You're Doubting Yourself</button>
+<button onclick="openLetter('sad','19163657950')">Open When You're Sad</button>
+<button onclick="openLetter('birthday','Mrs detective')">Open On Your Birthday 🎂</button>
+
+<!-- Letters with pictures and autoplay -->
+<div id="prebday" class="letter">
+<h2>Almost Your Birthday 🤍</h2>
+<p>
+Now that you have guessed it right my smarty pants. I am glad we are here, I am glad we are in love. Time and again I count my blessings and run out of the count cause you take them uncountable times. I know aaj tera birthday nhi and we won’t be able to celebrate it utna but let’s try our best.<br><br>
+So my “bubbles” I am really proud of you i know and i have seen how much you’ve gone through, I want you to know nothing that you’ve done is going in vain. You inspire me to work hard to stay healthy too i try 🤭 but moreover to never give up. I love you for your heart, i love you for your soul and I love you for all things more. I am because of you. And I hope you like these letters. I love you to infinity and far ❤️.
+</p>
+<img src="prebday.png">
+<audio id="song-prebday" autoplay loop>
+  <source src="prebday.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<div id="heartvoice" class="letter">
+<h2>My Heart’s First Voice 🤍</h2>
+<p>
+The first time my dil did shor was when you stayed awake at night just because i wasn’t feeling good after getting bad results. I remember waking up and looking at the call log “5 hrs” it said and somehow that brought a smile on my face, I felt like my whole heart’s purpose was achieved.<br><br>
+Yes yes i know my dil has shored many times before for you but iski na baat hi kuch aur thi ek dum official dil ki mandir ki ghanti as if meri mannat puri hogayi ho. I love you to infinity ❤️❤️❤️.
+</p>
+<img src="heartvoice.png">
+<audio id="song-heartvoice" autoplay loop>
+  <source src="heartvoice.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<div id="fight" class="letter">
+<h2>When We Fight 🤍</h2>
+<p>
+Anyways, I want you to know jaan it's me and you against the world so no matter what happens no matter who is right, we need to remember we are in this together. And I will always make sure I never let any fight win over us. I love you but doesn’t mean you will fight with me okay. Muaah.
+</p>
+<img src="fight.png">
+<!-- Song removed -->
+</div>
+
+<div id="doubt" class="letter">
+<h2>When You’re Doubting Yourself 🤍</h2>
+<p>
+Ofc main hoon na. Baby meri jaan mera babu you are the best baby you’re the guy who I feel my dadu sent for me because you are so amazing. I know sometimes it gets overwhelming, it becomes easier to give up but I also know you don’t know how to give up and I hope you never learn to and for all those maybe situations I will be here holding your hand and whispering in your ears “main hoon na” and we will get through this ❤️.
+</p>
+<img src="doubt.png">
+<!-- Song removed -->
+</div>
+
+<div id="sad" class="letter">
+<h2>When You’re Sad 🤍</h2>
+<p>
+If tereko number maalum hai toh milaana. Come huggie 🤗 🤗. Fir please go call your girlfriend. Chalo pehle yeh padho.<br><br>
+You know my favourite feature of yours is your smile. Don’t let my favourite thing fade away. Muskurao aur aise hasso meri baaton pe girti rahu teri raahon pe aur inh mei hi kho jau. Ye gaane ka mann karta hai isiliye smile. I am here for you meri jaan. I am here to give you kissies and love you so come to me. Chalo muaah.
+</p>
+<img src="sad.png">
+<audio id="song-sad" autoplay loop>
+  <source src="sad.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<div id="birthday" class="letter">
+<h2>Happy Birthday My Love 🎂🤍</h2>
+<p>
+Your detective is here. Yaahooo. Hi baby. It’s your birthday!!! Omgggg tu innaaa badha hogaya hai.<br><br>
+3 years ago when I followed this random guy’s account just because he had a mic in his hand I didn’t know I will make him my husband but I am glad I did. You know I never believed in online love, I always used to believe I will meet someone offline but now that I think of it I am glad we met online and started ldr.<br><br>
+We have come so far baby we ve been apart we ve came back to each other all because it’s meant to be. You make me mad, but more than that you make me happy. From not knowing anything about each other to now knowing what you’re gonna say from your each eye ball movement itna toh pata hai that I am here to stay.<br><br>
+I can’t wait to have a family with you, to go watch football match with you, to hug you, to kiss you, to marry you. I can’t wait to be with you. Thankyou for being my greatest blessing. I love you my love ❤️❤️.
+</p>
+<img src="birthday.png">
+<audio id="song-birthday" autoplay loop>
+  <source src="birthday.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<script>
+function openLetter(id, password){
+  var input = prompt("Enter the password:");
+  if(input === password){
+    document.querySelectorAll('.letter').forEach(l => l.style.display = "none");
+    document.getElementById(id).style.display = "block";
+  } else {
+    alert("Wrong password 🤍 Try again!");
+  }
+}
+</script>
+
+</body>
+</html>
