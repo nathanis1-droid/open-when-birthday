@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Open When 💌</title>
+
+<style>
+body {
+  font-family: Arial;
+  background: linear-gradient(135deg, #ffe6f0, #ffd6ec);
+  text-align: center;
+  padding: 30px;
+}
+
+button {
+  background: #ff99cc;
+  border: none;
+  padding: 15px 25px;
+  margin: 10px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: #ff66b3;
+}
+
+.letter {
+  display: none;
+  background: white;
+  padding: 25px;
+  margin-top: 20px;
+  border-radius: 15px;
+  text-align: left;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+img {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+
+audio {
+  margin-top: 15px;
+  width: 100%;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Open When 💌</h1>
+
+<button onclick="openLetter('prebday','bubbles')">Day Before Birthday</button>
+<button onclick="openLetter('heartvoice','Dil kyu yeh mera')">My Heart’s First Voice</button>
+<button onclick="openLetter('fight','I am sorry Sarah')">When We Fight</button>
+<button onclick="openLetter('doubt','Sarah hai na')">When You Doubt Yourself</button>
+<button onclick="openLetter('sad','19163657950')">When You're Sad</button>
+<button onclick="openLetter('birthday','Mrs detective')">On Your Birthday 🎂</button>
+
+<!-- PREBDAY -->
+<div id="prebday" class="letter">
+<h2>Almost Your Birthday 🤍</h2>
+<p>
+Now that you have guessed it right my smarty pants. I am glad we are here, I am glad we are in love. Time and again I count my blessings and run out of the count because you make them uncountable times. I know today isn’t your birthday and we won’t be able to celebrate it fully, but we will try our best.
+
+So my “bubbles”, I am really proud of you. I have seen how much you’ve gone through. Nothing you’ve done is going in vain. You inspire me to work hard and never give up. I love you for your heart, I love you for your soul and I love you for everything more. I am because of you. I love you to infinity and far ❤️.
+</p>
+<img src="prebday.png">
+<audio controls loop>
+  <source src="prebday.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<!-- HEARTVOICE -->
+<div id="heartvoice" class="letter">
+<h2>My Heart’s First Voice 🤍</h2>
+<p>
+The first time my dil did shor was when you stayed awake at night just because I wasn’t feeling good after getting bad results. I remember waking up and looking at the call log “5 hrs” it said and somehow that brought a smile on my face.
+
+Yes yes I know my dil has shored many times before for you but this one felt official — like the mandir ki ghanti rang just for us. I love you to infinity ❤️❤️❤️.
+</p>
+<img src="heartvoice.png">
+<audio controls loop>
+  <source src="heartvoice.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<!-- FIGHT -->
+<div id="fight" class="letter">
+<h2>When We Fight 🤍</h2>
+<p>
+I want you to know jaan it's me and you against the world. No matter what happens or who is right, we are in this together. No fight will ever be bigger than us. I will always choose us. I love you — but that doesn’t mean you fight too much okay. Muaah.
+</p>
+<img src="fight.png">
+<audio controls loop>
+  <source src="fight.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<!-- DOUBT -->
+<div id="doubt" class="letter">
+<h2>When You’re Doubting Yourself 🤍</h2>
+<p>
+Of course main hoon na. Baby meri jaan you are the best. I truly feel like you were sent for me. I know sometimes it gets overwhelming and easier to give up, but I know you don’t know how to give up.
+
+For every maybe situation I will be there holding your hand and whispering “main hoon na”. We will get through everything ❤️.
+</p>
+<img src="doubt.png">
+<audio controls loop>
+  <source src="doubt.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<!-- SAD -->
+<div id="sad" class="letter">
+<h2>When You’re Sad 🤍</h2>
+<p>
+If you know the number, call me. Come huggie 🤗. I know sometimes it feels heavy and quiet and overwhelming, but you are never alone. I am always one call away. Let me be your comfort place.
+</p>
+<img src="sad.png">
+<audio controls loop>
+  <source src="sad.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<!-- BIRTHDAY -->
+<div id="birthday" class="letter">
+<h2>Happy Birthday 🎂🤍</h2>
+<p>
+Today is your day. I hope you feel celebrated, loved, and reminded of how special you are. You deserve the happiest birthday ever. I am so lucky to love you. I can’t wait to celebrate many more birthdays together ❤️.
+</p>
+<img src="birthday.png">
+<audio controls loop>
+  <source src="birthday.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<script>
+function openLetter(id, password) {
+
+  var input = prompt("Enter the password:");
+
+  if (input === password) {
+
+    document.querySelectorAll('.letter').forEach(letter => {
+      letter.style.display = "none";
+
+      var audio = letter.querySelector("audio");
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+      }
+    });
+
+    document.getElementById(id).style.display = "block";
+
+  } else {
+    alert("Wrong password 🤍");
+  }
+}
+</script>
+
+</body>
+</html>
